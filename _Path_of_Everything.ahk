@@ -6,10 +6,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetTimer, close, 1000
 
 ;Set these to work in your environment // Browser: chrome: chrome.exe, firefox: firefox.exe, Internet Explorer (lol): IExplore.exe
-browser=chrome.exe
-tradepath=D:\POE-TradeMacro-2.16.0\
-poepath=C:\Program Files (x86)\Steam\steamapps\common\Path of Exile\
-pobpath=C:\Users\kayde\AppData\Roaming\Path of Building Community\
+inifile = config.ini
+IniRead, browser, %inifile%, browser, browser
+IniRead, tradepath, %inifile%, trademacro, path
+IniRead, poepath, %inifile%, pathofexile, path
+IniRead, pobpath, %inifile%, pathofbuilding, path
 
 run %poepath%PathOfExile_x64Steam.exe
 
