@@ -3,9 +3,8 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-SetTimer, close, 1000
+SetTimer, Close, 10000
 
-;Set these to work in your environment // Browser: chrome: chrome.exe, firefox: firefox.exe, Internet Explorer (lol): IExplore.exe
 inifile = config.ini
 IniRead, browser, %inifile%, browser, browser
 IniRead, tradepath, %inifile%, trademacro, path
@@ -16,28 +15,26 @@ run %poepath%PathOfExile_x64Steam.exe
 
 run %A_AhkPath% %tradepath%Run_TradeMacro.ahk
 
-F11::
+^F11::
 	TrayTip #1, F5: poe.ninja F6: trading F7: PoB F8: Leveling
 	Sleep 3000   ; Let it display for 3 seconds.
 return
 
-F5::
+^F5::
 	Run %browser% "https://poe.ninja" 
 return
 
-F6::
+^F6::
 	Run %browser% "https://www.pathofexile.com/trade/" 
 return
 
-F7::
+^F7::
 	run %pobpath%Path of Building.exe
 return
 
-F8::
+^F8::
 	Run %browser% "https://poe-leveling.netlify.app/"
 return
-
-
 
 #t::
   msgbox, win + t pressed
