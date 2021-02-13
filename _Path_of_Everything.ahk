@@ -3,7 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-SetTimer, Close, 10000
+SetTitleMatchMode, 3
 
 inifile = config.ini
 IniRead, browser, %inifile%, browser, browser
@@ -11,9 +11,11 @@ IniRead, tradepath, %inifile%, trademacro, path
 IniRead, poepath, %inifile%, pathofexile, path
 IniRead, pobpath, %inifile%, pathofbuilding, path
 
-run %poepath%PathOfExile_x64Steam.exe
-
 run %A_AhkPath% %tradepath%Run_TradeMacro.ahk
+
+Run %poepath%PathOfExile_x64Steam.exe,,,PID
+WinWait, Path of Exile, , 5
+SetTimer, PoE, 100
 
 ^F11::
 	TrayTip #1, F5: poe.ninja F6: trading F7: PoB F8: Leveling
@@ -40,7 +42,9 @@ return
   msgbox, win + t pressed
 Return
 
-Close:
-  IfWinNotExist, Path of Exile
-    exitapp
+PoE:
+	IfWinNotExist Path of Exile
+	{
+		ExitApp
+	}
 Return
