@@ -16,12 +16,20 @@ it will load Path of Exile and the TradeMacro.
 
 after that it will give you the opportunity to use some Hotkeys.
 
-F5: opens poe.ninja in browser
+| Hotkey   | Result   |
+| -------- | -------- |
+| ctrl + f5    | opens poe.ninja in browser   |
+| ctrl + f6    | opens pathofexile.com/trade in browser  |
+| ctrl + f7    | opens PathOfBuilding  |
+| ctrl + f8    | opens leveling guide in browser  |
+| ctrl + f11   | Show windows notification with hotkeys |
 
-F6: opens pathofexile.com/trade in browser
+F5: 
 
-F7: opens PathOfBuilding
+F6: 
 
-F8: opens leveling guide in browser
+F7: 
+
+F8: 
 
 F11: Show windows notification with hotkeys
