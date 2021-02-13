@@ -1,14 +1,23 @@
 Path of Everything - all nice to haves
 
-You need to specify some configs in the Script.
+Requirements:
+- Autohotkey V2
+- Path of Building: https://github.com/PathOfBuildingCommunity/PathOfBuilding/releases/tag/v1.4.170.24
+- TradeMacro: https://github.com/PoE-TradeMacro/POE-TradeMacro
+- Some Browser
+- Path Of Exile
+- A Computer
+- and so on
 
-browser - set your browser as you wish! chrome.exe for Google Chrome or firefox.exe for Mozilla Firefox
+You need to specify some configs in the config.ini file
 
-tradepath - set the path to your tradeMacro folder last \ included
+| Setting | Value |
+| ------- | ----- |
+| browser | set your browser as you wish! chrome.exe for Google Chrome or firefox.exe for Mozilla Firefox |
+| trademacro | set the path to your tradeMacro folder last \ included |
+| pathofexile | set the path to your Path of Exile installation - last \ included |
+| pathofbuilding | set the path to your Path of Building exe - last \ included |
 
-poepath - set the path to your Path of Exile installation - last \ included
-
-pobpath - set the path to your Path of Building exe - last \ included
 
 if you've done that you can start the script.
 
@@ -24,12 +33,3 @@ after that it will give you the opportunity to use some Hotkeys.
 | ctrl + f8    | opens leveling guide in browser  |
 | ctrl + f11   | Show windows notification with hotkeys |
 
-F5: 
-
-F6: 
-
-F7: 
-
-F8: 
-
-F11: Show windows notification with hotkeys
