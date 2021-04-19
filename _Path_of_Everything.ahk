@@ -10,6 +10,7 @@ IniRead, browser, %inifile%, browser, browser
 IniRead, tradepath, %inifile%, trademacro, path
 IniRead, poepath, %inifile%, pathofexile, path
 IniRead, pobpath, %inifile%, pathofbuilding, path
+IniRead, exilence, %inifile%, exilencenext, path
 
 run %A_AhkPath% %tradepath%Run_TradeMacro.ahk
 
@@ -36,6 +37,10 @@ return
 
 ^F8::
 	Run %browser% "https://poe-leveling.netlify.app/"
+return
+
+^F9::
+	Run %exilence%Exilence Next.exe
 return
 
 #t::
